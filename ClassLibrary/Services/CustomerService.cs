@@ -84,9 +84,9 @@ namespace ClassLibrary.Services
         // Get All RICHARDS -  Get All RICHARDS -  Get All RICHARDS -  Get All RICHARDS - 
         // Get All RICHARDS -  Get All RICHARDS -  Get All RICHARDS -  Get All RICHARDS - 
 
-        public IEnumerable<CustomerDTO> GetAllRichards()
+        public IEnumerable<CustomerDTO> GetAllRichards(List<CustomerDTO> totalList)
         {
-            var richards = _context.Customers
+            var richards = totalList
                 .Where(c=>c.Name.Contains("Richard"))
                 .Select(c => new CustomerDTO
                 {
